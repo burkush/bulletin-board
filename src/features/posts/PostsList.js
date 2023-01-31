@@ -7,6 +7,12 @@ import {
 } from './postsSlice';
 import { useEffect } from 'react';
 import PostsExcerpt from './PostsExcerpt';
+import styled from 'styled-components';
+
+const StyledTitle = styled.h2`
+  margin-bottom: 30px;
+  text-align: center;
+`;
 
 const PostsList = () => {
   const dispatch = useDispatch();
@@ -36,8 +42,8 @@ const PostsList = () => {
   }
 
   return (
-    <section>
-      <h2>Posts</h2>
+    <section className="container">
+      <StyledTitle>Posts</StyledTitle>
       {content}
     </section>
   );
